@@ -81,3 +81,7 @@
   h2{
       text-align: center;
   }
+
+  .form-error{
+    color: #ff8080;
+  }

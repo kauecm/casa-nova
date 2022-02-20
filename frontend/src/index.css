@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 :root {
-  --color-primary: #000468;
+  --color-primary: #E6BAAA;
   --color-btn: #cdcdcd;
   --font-style: 'Noto Sans', sans-serif;
 }
@@ -12,7 +12,7 @@
 }
 
 html, body {
-    background-color: #DCDCDC;
+    background-color: #E6BAAA;
 }
 
 a, a:hover {

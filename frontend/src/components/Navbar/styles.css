@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+header{
+    background-color: #785346;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.casa-nav-content{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #fff;
+    margin-right: 50px;
+    
+}
+
+.casa-contact-container{
+    display: flex;
+    align-items: center;
+}
+
+p{
+    margin: 0 0 0 100px;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+}
+
+.div-user h6{
+    margin-top: none;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+.nav-dropdown-casa{
+    margin-top: auto;
+    
+}
+
+.btn-dropdown-casa{
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.icon-navbar{
+    height: 20px;
+    width: 25px;
+}
+
+.div-content-dropdown{
+    background-color: #785346;
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    display: table;
+    float: right;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.div-content-dropdown h6{
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    color: #fff;
+}
