@@ -3,29 +3,28 @@ import './styles.css'
 import { ErrorMessage, Formik, Form, Field} from 'formik';
 import { useState } from 'react';
 import { login, storeToken } from 'services/AuthenticationService';
-import http from 'api';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const FormLogin: React.FC = () => {
 
+    const navigate = useNavigate();
+
     const [credentials, setCredentials] = useState({ email: '', senha: '' })
     
-
-
-
-
     const handleSubmit = () => {
             try{
             login(credentials).then(response => {
              const jwt = response.jwt
              storeToken(`Bearer ${jwt}`);
+             navigate("/home");
             })
-            
-            
             }catch(err){
-    
+                axios.isAxiosError('Deu erro no login hein')
             }            
     }
+
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target
@@ -37,13 +36,11 @@ const FormLogin: React.FC = () => {
 
 
     return (
+
         <Formik initialValues={{}} onSubmit={handleSubmit}
         >
-            <div className="login-dark">
+            <div className="login-dark div-login">
                 <Form >
-
-
-
                     <h2 className="sr-only">Casa Nova</h2>
                     <div className="illustration">
                         <i className="icon ion-ios-locked-outline">
@@ -74,7 +71,7 @@ const FormLogin: React.FC = () => {
                     <div className="form-group form-group-btn">
 
                         <button className="btn btn-primary btn-block" type="submit">Login</button>
-
+                        
                     </div>
                     <a href="#" className="forgot">Esqueceu a senha ou E-mail?</a>
                 </Form>

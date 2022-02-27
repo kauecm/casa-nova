@@ -1,9 +1,11 @@
 import Navbar from "components/Navbar";
 
-function FormHome(){
-    return(
+
+function FormHome() {
+
+    return (
         <>
-        <Navbar/>
+            <Navbar />
         </>
     );
 }

@@ -1,9 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Link } from 'react-router-dom';
 import './styles.css';
 function Navbar() {
 
     function myFunction() {
         document.getElementById('navbarToggleExternalContent')?.classList.toggle("show");
+    }
+
+    const handleLogout =()=>{
+        localStorage.removeItem('token');
     }
 
     return (
@@ -18,11 +23,11 @@ function Navbar() {
                         </a>
                         <div className='casa-contact-container'>
 
-                            <a href="#">
+                            <Link to="/lista-presentes">
                                 <div >
                                     <p >Lista de Presentes</p>
                                 </div>
-                            </a>
+                            </Link>
                             <a href="#">
                                 <div>
                                     <p >Galeria de Fotos</p>
@@ -54,7 +59,9 @@ function Navbar() {
                 <div className=" ">
                     <a href='#'><h6>Carrinho</h6></a>
                     <a href='#'><h6>Configurações</h6></a>
-                    <a href='/'><h6>Sair</h6></a>
+                    <Link to="/login"> 
+                    <a onClick={handleLogout}><h6>Sair</h6></a>
+                    </Link>
                 </div>
             </div>
         </>

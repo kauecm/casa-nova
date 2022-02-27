@@ -20,6 +20,6 @@ export const storeToken = (jwt:Token) =>{
 }
 
 export const getToken = () =>{
-    return window.localStorage.getItem('token');
+    return localStorage.getItem('token');
 }
 

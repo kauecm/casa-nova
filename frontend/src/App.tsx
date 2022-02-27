@@ -1,4 +1,5 @@
 import Home from "pages/Home";
+import ListaPresentes from "pages/ListaPresentes";
 import PageLogin from "pages/LoginPage";
 import {
   BrowserRouter,
@@ -12,8 +13,9 @@ function App() {
     <BrowserRouter>
 
       <Routes>
-        <Route path="/login" element={<PageLogin />} />
-        <Route path="/login/home" element={<Home />} />
+        <Route path="/" element={<PageLogin />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/lista-presentes" element={<ListaPresentes/>} />
       </Routes>
     </BrowserRouter>
   );

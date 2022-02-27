@@ -18,8 +18,21 @@ export type Fotos = {
 export type Presentes ={
     id:number;
     nome:string;
+    mne:string;
     categoria:number;
     escolhido:boolean;
+}
+
+export type PresentesPage ={
+    content?: Presentes[];
+    last:boolean;
+    totalPages:number;
+    totalElements:number;
+    size?:number;
+    number:number;
+    first:boolean;
+    numberOfElements?:number;
+    empty?:boolean;
 }
 
 export type ConvidadosPage ={
